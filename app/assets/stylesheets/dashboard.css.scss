@@ -1,3 +1,32 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+}
+
+div.balance_section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+
+  div.account {
+    width: 260px;
+    height: 200px;
+    text-align: center;
+    background-color: #ffeeff;
+    border: 2px solid #ce4dd6;
+  }
+
+  p.title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  p.amount {
+    color: #ce4dd6;
+    font-size: 48px;
+    font-weight: bold;
+  }
+}
