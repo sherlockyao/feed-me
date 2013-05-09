@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  debit: 9.99
+  credit: 9.99
+  user: 
+
+two:
+  debit: 9.99
+  credit: 9.99
+  user: 
