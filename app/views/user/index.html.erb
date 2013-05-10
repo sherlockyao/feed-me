@@ -1,3 +1,7 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag "user" %>
+  <%= javascript_include_tag "user" %>
+<% end -%>
 <div class="users_section">
   <h1>I am :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
   <% @users.each do |user| %>
