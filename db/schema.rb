@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509080438) do
+ActiveRecord::Schema.define(:version => 20130510093837) do
 
   create_table "balances", :force => true do |t|
     t.decimal  "debit"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(:version => 20130509080438) do
   end
 
   add_index "balances", ["user_id"], :name => "index_balances_on_user_id"
+
+  create_table "cashflows", :force => true do |t|
+    t.decimal  "amount"
+    t.integer  "debitor_id"
+    t.integer  "creditor_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
