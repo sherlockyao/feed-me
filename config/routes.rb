@@ -1,5 +1,7 @@
 FeedMe::Application.routes.draw do
-  get "dashboard/index"
+  
+  match "users/" => "user#index"
+  match "dashboard/" => "dashboard#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

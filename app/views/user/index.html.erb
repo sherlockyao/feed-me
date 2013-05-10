@@ -1,0 +1,11 @@
+<div class="users_section">
+  <h1>I am :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+  <% @users.each do |user| %>
+    <div class="user_profile" id="user_<%= user.id %>">
+      <%= user.name %>
+    </div>
+  <% end %>
+  <div style="clear: both;"></div>
+  <br />
+  <%= link_to "<< Back", root_path, :id => 'back_link' %>
+</div>
