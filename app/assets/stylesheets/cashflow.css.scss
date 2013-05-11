@@ -1,9 +1,10 @@
-div.users_section {
+div.amount_section {
   margin-left: auto;
   margin-right: auto;
   width: 750px;
 
-  div.user_profile {
+  div.amount {
+    font-size: 20px;
     float: left;
     width: 150px;
     height: 70px;
@@ -14,6 +15,10 @@ div.users_section {
     padding: 5px;
 
     &:hover { background-color: #fce28b; cursor: pointer; }
+
+    input {
+      text-align: center;
+    }
   }
 
   a {

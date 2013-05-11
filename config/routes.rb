@@ -1,7 +1,10 @@
 FeedMe::Application.routes.draw do
-  
-  match "users/" => "user#index"
-  match "dashboard/" => "dashboard#index"
+
+  match 'users' => 'user#index'
+  match 'dashboard' => 'dashboard#index'
+  match 'cashflow/credit' => 'cashflow#credit', :via => :post
+  match 'cashflow/refund' => 'cashflow#refund', :via => :post
+  match 'cashflow/:debitor_id' => 'cashflow#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

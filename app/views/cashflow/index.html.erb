@@ -1,0 +1,53 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag "cashflow" %>
+  <%= javascript_include_tag "cashflow" %>
+<% end -%>
+
+<%= form_tag(cashflow_credit_path, :id => 'credit_form') do |f| %>
+  <%= hidden_field_tag 'amount' %>
+  <%= hidden_field_tag 'debitor_id', params[:debitor_id] %>
+  <%= hidden_field_tag 'creditor_id' %>
+<% end %>
+<div class="amount_section">
+  <h1>I Consumed:</h1>
+  <div class="amount" id="amount_8">
+    ¥&nbsp;&nbsp;8
+  </div>
+  <div class="amount" id="amount_9">
+    ¥&nbsp;&nbsp;9
+  </div>
+  <div class="amount" id="amount_10">
+    ¥&nbsp;&nbsp;10
+  </div>
+  <div class="amount" id="amount_11">
+    ¥&nbsp;&nbsp;11
+  </div>
+  <div class="amount" id="amount_12">
+    ¥&nbsp;&nbsp;12
+  </div>
+  <div class="amount" id="amount_13">
+    ¥&nbsp;&nbsp;13
+  </div>
+  <div class="amount" id="amount_14">
+    ¥&nbsp;&nbsp;14
+  </div>
+  <div class="amount" id="amount_15">
+    ¥&nbsp;&nbsp;15
+  </div>
+  <div class="amount" id="amount_16">
+    ¥&nbsp;&nbsp;16
+  </div>
+  <div class="amount" id="amount_17">
+    ¥&nbsp;&nbsp;17
+  </div>
+  <div class="amount" id="amount_18">
+    ¥&nbsp;&nbsp;18
+  </div>
+  <div class="amount">
+    <input id="custom_amount" type="text" value="20" />
+    <input id="custom_button" type="button" value="custom" />
+  </div>
+  <div style="clear: both;"></div>
+  <br />
+  <%= link_to "<< Back", root_path, :id => 'back_link' %>
+</div>

@@ -4,11 +4,11 @@
 <% end -%>
 <h1>Buynow Cards Balance</h1>
 <div class="balance_section">
-  <div class="account" style="float: left;">
+  <div class="account" id="user_<%= @jay.id %>" style="float: left;">
     <p class="title"><%= @jay.name %></p>
     <p class="amount">¥&nbsp;&nbsp;<%= @jay.balance.debit %></p>
   </div>
-  <div class="account" style="float: right;">
+  <div class="account" id="user_<%= @vera.id %>" style="float: right;">
     <p class="title"><%= @vera.name %></p>
     <p class="amount">¥&nbsp;&nbsp;<%= @vera.balance.debit %></p>
   </div>

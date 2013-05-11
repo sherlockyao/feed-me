@@ -1,5 +1,5 @@
 class Cashflow < ActiveRecord::Base
-  attr_accessible :amount
+  attr_accessible :amount, :creditor_id, :debitor_id
   belongs_to :creditor, :class_name => "User"
   belongs_to :debitor, :class_name => "User"
 

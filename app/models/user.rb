@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   def credit(amount, debitor_id)
     debitor = User.find(debitor_id)
-    Cashflow.new(:amount => amount, :debitor => debitor, :creditor => self)
+    Cashflow.new(:amount => amount, :debitor_id => debitor.id, :creditor_id => self.id)
     Balance.transaction do
       self.balance.credit += amount
       self.balance.save!
