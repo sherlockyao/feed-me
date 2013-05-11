@@ -1,0 +1,22 @@
+<% content_for :header do -%>
+  <%= stylesheet_link_tag "cashflow" %>
+  <%= javascript_include_tag "cashflow" %>
+<% end -%>
+<div class="cashflows_section">
+  <%= form_tag(cashflow_refund_path, :id => 'refund_form') do |f| %>
+    <%= text_field_tag 'amount', @refund_amount %>
+    <%= hidden_field_tag 'debitor_id', params[:debitor_id] %>
+    <%= hidden_field_tag 'creditor_id', params[:creditor_id] %>
+    <%= submit_tag 'Pay Back' %>
+  <% end %>
+  <h3>History</h3>
+  <hr />
+  <ul>
+    <% @cashflows.each do |cashflow| %>
+      <li>
+        <%= cashflow.amount %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "<< Back", root_path, :id => 'back_link' %>
+</div>

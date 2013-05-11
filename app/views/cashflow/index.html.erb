@@ -8,7 +8,7 @@
   <%= hidden_field_tag 'debitor_id', params[:debitor_id] %>
   <%= hidden_field_tag 'creditor_id' %>
 <% end %>
-<div class="amount_section">
+<div class="amounts_section">
   <h1>I Consumed:</h1>
   <div class="amount" id="amount_8">
     ¥&nbsp;&nbsp;8
@@ -48,6 +48,7 @@
     <input id="custom_button" type="button" value="custom" />
   </div>
   <div style="clear: both;"></div>
+  <h3><a id="payback_link" href="#">Pay Back</a></h3>
   <br />
   <%= link_to "<< Back", root_path, :id => 'back_link' %>
 </div>
