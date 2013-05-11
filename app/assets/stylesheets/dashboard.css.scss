@@ -17,6 +17,8 @@ div.balance_section {
     text-align: center;
     background-color: #ffeeff;
     border: 2px solid #ce4dd6;
+
+    &:hover { background-color: #fce28b; cursor: pointer; }
   }
 
   p.title {
