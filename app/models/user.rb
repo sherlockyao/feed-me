@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
     self.balance ||= self.build_balance
   end
 
-  def self.credit(amount, debitor_id)
+  def credit(amount, debitor_id)
     debitor = User.find(debitor_id)
     Cashflow.new(:amount => amount, :debitor => debitor, :creditor => self)
     Balance.transaction do
